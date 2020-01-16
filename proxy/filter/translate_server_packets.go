@@ -5,7 +5,7 @@ import (
 
 	"net"
 
-	"github.com/bonnetn/srcds_proxy/proxy/models"
+	"github.com/FlowingSPDG/srcds_proxy/proxy/models"
 	"github.com/golang/glog"
 )
 

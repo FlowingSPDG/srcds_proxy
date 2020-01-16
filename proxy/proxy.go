@@ -1,26 +1,25 @@
 package proxy
 
 import (
-	"github.com/bonnetn/srcds_proxy/proxy/config"
-	"github.com/bonnetn/srcds_proxy/proxy/filter"
-	"github.com/bonnetn/srcds_proxy/proxy/mapper"
-	"github.com/bonnetn/srcds_proxy/proxy/models"
+	"github.com/FlowingSPDG/srcds_proxy/proxy/filter"
+	"github.com/FlowingSPDG/srcds_proxy/proxy/mapper"
+	"github.com/FlowingSPDG/srcds_proxy/proxy/models"
 	"github.com/golang/glog"
 )
 
 // Launch launches the proxy.
-func Launch() error {
+func Launch(ListenAddr string, ServerAddr string) error {
 
 	glog.Info("Starting proxy.")
-	glog.Info("Listen address: ", config.ListenAddr())
-	glog.Info("Proxy to address: ", config.ServerAddr())
+	glog.Info("Listen address: ", ListenAddr)
+	glog.Info("Proxy to address: ", ServerAddr)
 
-	listenHost, err := mapper.StringToHost(config.ListenAddr())
+	listenHost, err := mapper.StringToHost(ListenAddr)
 	if err != nil {
 		glog.Fatal(err)
 	}
 
-	dstHost, err := mapper.StringToHost(config.ServerAddr())
+	dstHost, err := mapper.StringToHost(ServerAddr)
 	if err != nil {
 		glog.Fatal(err)
 	}

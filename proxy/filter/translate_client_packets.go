@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"net"
 
-	"github.com/bonnetn/srcds_proxy/proxy/mapper"
-	"github.com/bonnetn/srcds_proxy/proxy/models"
+	"github.com/FlowingSPDG/srcds_proxy/proxy/mapper"
+	"github.com/FlowingSPDG/srcds_proxy/proxy/models"
 	"github.com/golang/glog"
 )
 
